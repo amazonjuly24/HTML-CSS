@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Bootstrap Example</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="style.css" type="text/css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <style> 
+
+
+
+
+
+            /* CSS used here will be applied after bootstrap.css */
+
+            body,html { 
+                background: url('b.jpg') no-repeat center center fixed; 
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover;
+                height:100%;
+            }
+
+            .panel-default {
+                opacity: 0.8;
+                margin-top:10px;
+            }
+            .form-group.last {
+                margin-bottom:0px;
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            .navbar-brand {
+                max-height: 100px;
+                height: 80%;
+                width: auto;
+                align:left;
+                max-width: 80px
+
+
+
+            }
+            
+            /*NAVBAR*/
+            .navbar {
+      margin-bottom: 0;
+      background-color:whitesmoke;
+      z-index: 9999;
+      border: 0;
+      font-size: 13px !important;
+      line-height: 1.42857143 !important;
+      letter-spacing: 4px;
+      border-radius: 0;
+      font-family: Montserrat, sans-serif;
+     
+  }
+  
+            .bg-img {
+                /* The image used */
+                background-image: url("b.jpg");
+
+                height: 100%;
+
+                /* Center and scale the image nicely */
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+
+            /*Social media icons*/
+            .fa {
+                padding: 10px;
+
+                font-size: 20px;
+                width: 50px;
+                text-align: center;
+                text-decoration: none;
+                margin: 3px 2px;
+                border-radius: 50%;
+            }
+
+            .fa:hover {
+                opacity: 0.7;
+            }
+
+            .fa-facebook {
+
+                color: white;
+            }
+            .fa-youtube {
+
+                color: red;
+            }
+
+            .fa-twitter {
+                background: #55ACEE;
+                color: white;
+            }
+
+            .fa-google {
+                background: #dd4b39;
+                color: white;
+            }
+
+            /* Add styles to the form container */
+            .login {
+                position: absolute;
+                right: 0;
+                margin: 70px;
+                max-width: 300px;
+                padding: 10px;
+                border-radius: 3%;
+                background-color: whitesmoke;
+                opacity: 50%;
+
+            }
+
+            P { text-align: center 
+
+            }
+            H2 { text-align: center }
+            H4 {
+                text-align: center;
+                color: lightseagreen;
+
+            }
+            /**/
+            .join{
+                padding-right: 10px;
+                background-color: steelblue;
+                border:none;
+                padding-top: 8px;
+                margin-right: 20px;
+
+            }
+            /* Full-width input fields */
+            input[type=text], input[type=password] {
+                width: 100%;
+                padding: 16px 20px;
+
+                border: none;
+                background: #f1f1f1;
+            }
+
+            input[type=text]:focus, input[type=password]:focus {
+                background-color: whitesmoke;
+                outline: none;
+            }
+            /*Downlaod buttton*/
+            .big-btn{
+                padding: 10px 0px 11px 0px;
+                width: 215px;
+                margin-top:5px;
+            }
+
+            .big-btn i{
+                font-size: 65px;
+                margin-right: 0px !important;
+            }
+            .big-btn strong{
+                font-size: 25px;
+                text-shadow: 1px 2px 0px #34659B;
+                color: #fff;
+                line-height: 24px;
+            }
+            .big-btn .btn-text{
+                margin-top:6px;
+            }
+
+            .big-btn small{font-size: 75%;}
+
+            .play{
+
+                padding-bottom: 20px;
+                width: 150px;
+                height: 70px;
+                padding-top: 0px;
+                margin:10 px;
+
+
+
+
+
+
+
+            }
+            .logo{
+
+                margin-left: 20px;
+
+            }
+            .android-btn:hover{
+                background-color: #272727;
+            }
+
+            .android-btn i{
+                font-size: 55px;
+            }
+
+            .android-btn .btn-text{
+                margin-top: 0px;
+            }
+
+            .android-btn strong{
+                font-size: 25px;
+                text-shadow: none;
+                color: #fff;
+                line-height: 24px;
+            }
+
+            .windows-btn{
+                background-color:#008A00;
+                width: 235px;
+                padding: 13px 5px 13px 10px;
+                border-color: #055805;
+            }
+
+            .windows-btn:hover{
+                background-color: #008A00;
+            }
+            .windows-btn .btn-text{
+                text-shadow: none;
+                font-size: 26px;
+                line-height: 25px;
+            }
+            /*background to login*/
+            /* CSS used here will be applied after bootstrap.css */
+
+            /* Set a style for the submit button */
+            .btn {
+                background-color: steelblue;
+                color: white;
+                padding: 16px 20px;
+                border: none;
+                cursor: pointer;
+                width: 100%;
+                opacity: 0.9;
+
+            }
+            .product .img-responsive {
+                margin: 0 auto;
+            }
+            .btn:hover {
+                opacity: 1;
+                background-color: slateblue;
+            }
+
+
+            footer {
+                position: fixed;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+
+                text-align: center;
+                background-color: #555;
+                color: white;
+                padding: 15px;
+            }
+
+        </style>
+    </head>
+    <body>
+
+
+
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>                        
+                    </button>
+                    <a class="navbar-brand logo" href="#myPage"><img src="main_logo.png" alt="dbs logo" class="img-responsive logo" style="width:500%;height: 500%"></a>
+                </div>
+
+
+
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#about">ABOUT</a></li>
+                        <li><a href="#services">CONTACT</a></li>
+                        <li><a href="#" class="fa fa-facebook"></a></li>
+                        <li> <a href="#" class="fa fa-youtube"></a></li>
+
+                        <li>
+                            <button type="button" class="btn-sm btn-primary navbar-btn join">
+                                <span class="glyphicon glyphicon-plus"></span> 
+                                JOIN US
+                            </button>
+                        </li>
+                        <li></li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+
+
+
+
+
+        <div class="bg-img">
+
+
+            <div class="container">    
+                <div id="loginbox" style="margin-top:150px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">                    
+                    <div class="panel panel-info panel-default" >
+                        <div class="panel-heading">
+                            <div class="panel-title">Sign In</div>
+                            <div style="float:right; font-size: 80%; position: relative; top:-10px"><a href="#">Forgot password?</a></div>
+                        </div>     
+
+                        <div style="padding-top:30px" class="panel-body" >
+
+                            <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
+
+                            <form id="loginform" class="form-horizontal" role="form">
+
+                                <div style="margin-bottom: 25px" class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                    <input id="login-username" type="text" class="form-control" name="username" value="" placeholder="Enter agent ID">                                        
+                                </div>
+
+                                <div style="margin-bottom: 25px" class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                                    <input id="login-password" type="password" class="form-control" name="password" placeholder="Password">
+                                </div>
+
+
+
+                                <div class="input-group">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input id="login-remember" type="checkbox" name="remember" value="1"> Remember me
+                                        </label>
+                                    </div>
+                                </div>
+
+
+                                <div style="margin-top:10px" class="form-group">
+                                    <!-- Button -->
+
+
+                                    <div class="col-sm-12 controls">
+                                        <a id="btn-login" href="#" class="btn btn-success">Login  </a>
+
+                                    </div>
+
+
+                                </div>
+
+
+                                <div class="form-group">
+                                    <div class="col-md-12 control">
+                                        <div style="border-top: 1px solid#888; padding-top:15px; font-size:85%" >
+                                            Don't have an account! 
+                                            <a href="#" onClick="$('#loginbox').hide(); $('#signupbox').show()">
+                                                Sign Up Here</a>
+
+                                            <div class="form-group">
+                                                &nbsp;<p><button class="btn-link">Download DBS Wallet<img src="google-play-badge.png" alt="playstore" class="img-responsive play center-block"></button></p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>    
+
+                            </form>     
+
+
+
+                        </div>                     
+                    </div>  
+                </div>
+                <div id="signupbox" style="display:none; margin-top:100px" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <div class="panel-title">Sign Up</div>
+                            <div style="float:right; font-size: 85%; position: relative; top:-10px"><a id="signinlink" href="#" onclick="$('#signupbox').hide(); $('#loginbox').show()">Sign In</a></div>
+                        </div>  
+                        <div class="panel-body" >
+                            <form id="signupform" class="form-horizontal" role="form">
+
+                                <div id="signupalert" style="display:none" class="alert alert-danger">
+                                    <p>Error:</p>
+                                    <span></span>
+                                </div>
+
+
+
+                                <div class="form-group">
+                                    <label for="email" class="col-md-3 control-label">Email</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="email" placeholder="Email Address">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="firstname" class="col-md-3 control-label">First Name</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="firstname" placeholder="First Name">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastname" class="col-md-3 control-label">Last Name</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="lastname" placeholder="Last Name">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="password" class="col-md-3 control-label">Password</label>
+                                    <div class="col-md-9">
+                                        <input type="password" class="form-control" name="passwd" placeholder="Password">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="icode" class="col-md-3 control-label">Invitation Code</label>
+                                    <div class="col-md-9">
+                                        <input type="text" class="form-control" name="icode" placeholder="">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <!-- Button -->                                        
+                                    <div class="col-md-offset-3 col-md-9">
+                                        <button id="btn-signup" type="button" class="btn btn-info"><i class="icon-hand-right"></i> Sign Up</button>
+
+                                    </div>
+                                </div>
+
+
+
+
+                            </form>
+                        </div>
+                    </div>
+
+
+
+
+                </div> 
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <footer class="container-fluid">
+                <p>© Copyright 2017 Digital Banking Services Pvt. Ltd. All rights reserved. </p>
+
+
+
+
+
+
+            </footer>
+            <script>
+                function check()
+                {
+                    var checker = document.getElementById('checkme');
+                    var sendbtn = document.getElementById('send');
+                    // when unchecked or checked, run the function
+                    checker.onchange = function () {
+                        if (this.checked) {
+                            sendbtn.disabled = false;
+                        } else {
+                            sendbtn.disabled = true;
+                        }
+
+                    }
+                }
+            </script>
+
+    </body>
+</html>
